@@ -1,0 +1,57 @@
+TODO popuniti odgovorima na pitanja iz problema 1
+
+a) Šta je „word2vec“? Objasniti smisao/primenu, bez detalja implementacije.
+
+Word2Vec je tehnika koja pretvara reči u numeričke vektore tako da reči sa sličnim značenjem
+imaju slične vektorske reprezentacije. Ovaj pristup omogućava modelima da razumeju semantičke odnose
+između reči na osnovu konteksta u kojem se pojavljuju.
+Primena Word2Vec-a:
+- Analiza teksta i obrade prirodnog jezika: poboljšava razumevanje značenja reči u zadacima
+ poput prevođenja, pretrage i klasifikacije teksta.
+- Preporučivanje sadržaja: koristi se u preporučivačkim sistemima za bolje povezivanje korisnika
+ sa relevantnim sadržajem.
+- Prepoznavanje sličnih reči: omogućava otkrivanje sinonima i srodnih pojmova.
+- Mašinsko učenje: služi kao ulazni format za modele koji rade sa tekstualnim podacima.
+
+
+
+b) Objasniti razliku između Gaussian, Multinomial i Bernouli Naive Bayes metoda.
+
+Naive Bayes je skup probabilističkih algoritama koji se koriste za klasifikaciju,
+a razlikuju se prema vrsti podataka koje obrađuju. Tri najčešće varijante su
+Gaussian Naive Bayes, Multinomial Naive Bayes i Bernoulli Naive Bayes.
+
+1. Gaussian Naive Bayes
+- Koristi se kada su podaci kontinuirani i pretpostavlja da oni prate normalnu (gausovu) raspodelu.
+- Pogodan je za probleme gde su ulazne vrednosti realni brojevi, npr. u klasifikaciji medicinskih podataka,
+ prepoznavanju rukopisa itd.
+
+2. Multinomial Naive Bayes
+- Koristi se za diskretne podatke, posebno kada se radi o brojanju pojavljivanja reči u tekstu.
+- Često se primenjuje u klasifikaciji teksta, kao što su analiza sentimenta i filtriranje neželjene pošte.
+- Model računa verovatnoće na osnovu učestalosti reči u dokumentu.
+
+3. Bernoulli Naive Bayes
+- Takođe se koristi za diskretne podatke, ali radi sa binarnim vrednostima (0 ili 1).
+- Umesto broja pojavljivanja reči, posmatra samo da li neka reč postoji u tekstu (1) ili ne (0).
+- Pogodan je za probleme gde su ulazne vrednosti binarne, npr. prisustvo ili odsustvo određenih
+karakteristika u podatku.
+
+
+
+c) Šta je „linearna separabilnost” (linear separability)? Da li su podaci iz skupa
+iris.csv linearno separabilni (objasniti šta se primećuje)?
+
+- Linearna separabilnost označava svojstvo skupa podataka gde je moguće nacrtati pravu
+(hiperravan u višedimenzionom prostoru) koja potpuno razdvaja klase. Drugim rečima, ako postoji linearni model
+(poput perceptrona ili logističke regresije) koji može tačno klasifikovati sve uzorke,
+tada su podaci linearno separabilni.
+
+- Skup podataka iris.csv sadrži tri klase cveća:Setosa, Versicolor, Virginica.
+- Svaka instanca ima četiri numeričke osobine (dužina i širina latice i čašičnog lista).
+
+- Setosa je jasno odvojena od ostale dve klase u prostoru osobina – znači, linearno je separabilna.
+Versicolor i Virginica se preklapaju i nisu linearno separabilne – nema hiperravni koja može
+potpuno razdvojiti sve instance ovih klasa.
+
+- Ako gledamo sve tri klase zajedno, podaci nisu linearno separabilni.
